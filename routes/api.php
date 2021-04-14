@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/books/all', [App\Http\Controllers\Bookcontroller::class, 'index']);
+
+Route::post('/books/new', [App\Http\Controllers\Bookcontroller::class, 'create']);
+
+Route::post('/books/update/{id}', [App\Http\Controllers\Bookcontroller::class, 'update']);
+
+Route::post('/books/delete/{id}', [App\Http\Controllers\Bookcontroller::class, 'delete']);
