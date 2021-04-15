@@ -19,10 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/books/all', [BookController::class, 'index']);
+Route::get('/authors/all', [App\Http\Controllers\AuthorController::class, 'index']);
+Route::post('/authors/new', [App\Http\Controllers\AuthorController::class, 'create']);
 
-Route::post('/books/new', [BookController::class, 'create']);
+// Route::post('/books/new', [BookController::class, 'create']);
 
-Route::post('/books/update/{id}', [BookController::class, 'update']);
+// Route::post('/books/update/{id}', [BookController::class, 'update']);
 
-Route::post('/books/delete/{id}', [BookController::class, 'delete']);
+// Route::post('/books/delete/{id}', [BookController::class, 'delete']);
