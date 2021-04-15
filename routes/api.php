@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,7 +23,8 @@ Route::get('/authors/all', [App\Http\Controllers\AuthorController::class, 'index
 Route::get('/books/all', [App\Http\Controllers\BookController::class, 'index']);
 Route::get('/users/all', [App\Http\Controllers\UserController::class, 'index']);
 Route::post('/users/new', [App\Http\Controllers\UserController::class, 'create']);
-Route::post('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'delete']);
+Route::post('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'destroy']);
+Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, 'update']);
 
 // Route::post('/books/new', [BookController::class, 'create']);
 

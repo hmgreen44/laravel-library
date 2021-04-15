@@ -32,44 +32,14 @@ class UserController extends Controller
         $user->save();
         return $user;
     }
-   public function destroy(Book $book)
+   public function destroy($id)
     {
-    User::find($id)->delete();   
+    User::find($id)->delete();
+         return 'Record deleted successfully';
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-//     public function store(Request $request)
-//     {
-//         
-//     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
-//     public function show(Book $book)
-//     {
         
-//     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
-//     public function edit(Book $book)
-//     {
-//         //
-//     }
-
+   
     /**
      * Update the specified resource in storage.
      *
@@ -77,10 +47,15 @@ class UserController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-//     public function update(Request $request, Book $book)
-//     {
-//         //
-//     }
+    public function update(Request $request, $id)
+    {
+       $user = User::find($id);
+       $user->name = $request->name;
+      
+       $user->save();
+       return $user;
+      
+    }
 
     /**
      * Remove the specified resource from storage.

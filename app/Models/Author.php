@@ -15,5 +15,8 @@ public $timestamps = true;
 protected $fillable = [
       'name'
 ];
- 
+  public function authorBooks()
+    {
+        return $this->hasMany(AuthorBook::class);
+    }
 }
