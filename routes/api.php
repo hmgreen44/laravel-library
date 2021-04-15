@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\AuthorBookController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,12 +21,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/authors/all', [App\Http\Controllers\AuthorController::class, 'index']);
-Route::get('/books/all', [App\Http\Controllers\BookController::class, 'index']);
-Route::get('/users/all', [App\Http\Controllers\UserController::class, 'index']);
-Route::post('/users/new', [App\Http\Controllers\UserController::class, 'create']);
-Route::post('/users/delete/{id}', [App\Http\Controllers\UserController::class, 'destroy']);
-Route::post('/users/update/{id}', [App\Http\Controllers\UserController::class, 'update']);
+Route::get('/authors/all', [AuthorController::class, 'index']);
+Route::get('/books/all', [BookController::class, 'index']);
+Route::get('/users/all', [UserController::class, 'index']);
+Route::post('/users/new', [UserController::class, 'create']);
+Route::post('/users/delete/{id}', [UserController::class, 'destroy']);
+Route::post('/users/update/{id}', [UserController::class, 'update']);
+Route::get('/author_books/all', [AuthorBookController::class, 'index']);
 
 // Route::post('/books/new', [BookController::class, 'create']);
 

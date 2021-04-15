@@ -14,7 +14,7 @@ class AuthorBookController extends Controller
      */
     public function index()
     {
-        //
+        return AuthorBook::all();
     }
 
     /**
