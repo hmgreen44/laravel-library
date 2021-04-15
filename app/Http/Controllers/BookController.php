@@ -14,7 +14,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+       return Book::all();
     }
 
     /**
@@ -22,9 +22,9 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $book = new Book();
     }
 
     /**
@@ -33,10 +33,10 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+//     public function store(Request $request)
+//     {
+//         
+//     }
 
     /**
      * Display the specified resource.
@@ -44,10 +44,10 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
-    {
-        //
-    }
+//     public function show(Book $book)
+//     {
+        
+//     }
 
     /**
      * Show the form for editing the specified resource.
@@ -55,10 +55,10 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
-    {
-        //
-    }
+//     public function edit(Book $book)
+//     {
+//         //
+//     }
 
     /**
      * Update the specified resource in storage.
@@ -67,10 +67,10 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
-    {
-        //
-    }
+//     public function update(Request $request, Book $book)
+//     {
+//         //
+//     }
 
     /**
      * Remove the specified resource from storage.
@@ -78,8 +78,8 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
-    {
-        //
-    }
+//     public function destroy(Book $book)
+//     {
+//         
+//     }
 }

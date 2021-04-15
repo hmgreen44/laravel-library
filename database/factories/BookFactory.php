@@ -22,7 +22,12 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->realText($this->faker->numberBetween(15,30)),
+            'ISBN' => $this->faker->isbn13,
+            'excerpt' => $this->faker->text,
+            'pages' => $this->faker->numberBetween(100,200),
+            'cost' => $this->faker->numberBetween(10,20),
+          
         ];
     }
 }
