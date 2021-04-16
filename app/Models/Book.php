@@ -19,4 +19,8 @@ protected $fillable = [
     {
         return $this->hasMany(AuthorBook::class);
     }
+  public function checkouts()
+    {
+        return $this->hasMany(Checkout::class);
+    }
 }

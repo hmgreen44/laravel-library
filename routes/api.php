@@ -6,6 +6,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\AuthorBookController;
+use App\Http\Controllers\CheckoutController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,6 +29,7 @@ Route::post('/users/new', [UserController::class, 'create']);
 Route::post('/users/delete/{id}', [UserController::class, 'destroy']);
 Route::post('/users/update/{id}', [UserController::class, 'update']);
 Route::get('/author_books/all', [AuthorBookController::class, 'index']);
+Route::get('/check_outs/all', [CheckoutController::class, 'index']);
 
 // Route::post('/books/new', [BookController::class, 'create']);
 

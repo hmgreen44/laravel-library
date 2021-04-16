@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
           UserSeeder::class,
           BookSeeder::class,
           AuthorSeeder::class,
-          AuthorBookSeeder::class,                 
+          AuthorBookSeeder::class,
+          CheckoutSeeder::class,
         ]);
         
        
